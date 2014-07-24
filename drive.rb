@@ -12,11 +12,11 @@ require 'google_drive'
 # GoogleDrive.login_with_oauth for details.
 session = GoogleDrive.login("", "")
 
-doc = session.document_by_key("1qf7MFp4IH-bSj--AQFW6mioK-EMzX-t1d04RgpqJsC8")
+doc = session.document_by_key("1abEar5CsPCOceKfqkYEukswiWNGyBuHkk6pMq_DiuXw")
 
 puts doc.human_url
 puts doc.title
-doc.download_to_string
+puts doc.download_to_string
 
 spread = session.spreadsheet_by_key("1VegPL25-AjvVXAijetBpoIMnzqpeWeRIOsX9fHhvwiM")
 

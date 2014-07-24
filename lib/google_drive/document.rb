@@ -90,14 +90,6 @@ module GoogleDrive
           end
         end
 
-        def download_to_io(io, params = {})
-          # General downloading API doesn't work for documents because it requires a different
-          # authorization token, and it has a bug that it downloads PDF when text/html is
-          # requested.
-          raise(NotImplementedError,
-              "Use export_as_file or export_as_string instead for GoogleDrive::Spreadsheet.")
-        end
-
         def inspect
           fields = {:feed_url => self.feed_url}
           fields[:title] = @title if @title
